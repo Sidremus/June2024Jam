@@ -1,4 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1719224431
-Global.gd::GDScript::-1::1716899775::0::1::::<>Node<>::
-icon.svg::CompressedTexture2D::5552347829255943492::1716899775::1719224432::1::::<><>::
+::res://::1719298301
+icon.svg::CompressedTexture2D::5552347829255943492::1719224901::1719224993::1::::<><>::
+default_bus_layout.tres::AudioBusLayout::5489132563905325219::1719297791::0::1::::<><>::
+::res://Assets/::1719297430
+::res://Assets/Audio/::1719298139
+Ellen_Emotes_Jumps_01.ogg::AudioStreamOggVorbis::1963165592006981839::1719298139::1719298139::1::::<><>::
+Gameplay.ogg::AudioStreamOggVorbis::3428285950139066686::1719297489::1719299186::1::::<><>::
+::res://Assets/Scenes/::1719299042
+Danae_test.tscn::PackedScene::8544927914670187972::1719299042::0::1::::<><>::res://Assets/Scripts/AudioManager.gd<>uid://bo3xmsif0ax6u::::res://Assets/Audio/Gameplay.ogg<>uid://278byl86ye6r::::res://Assets/Audio/Ellen_Emotes_Jumps_01.ogg<>res://Assets/Scenes/PlayerController.gd
+PlayerController.gd::GDScript::-1::1719299040::0::1::::<>Node<>::
+::res://Assets/Scripts/::1719299040
+AudioManager.gd::GDScript::-1::1719299040::0::1::::<>Node<>::
+Global.gd::GDScript::-1::1719224901::0::1::::<>Node<>::
