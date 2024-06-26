@@ -1,5 +1,3 @@
-res://Assets/Scenes/Danae_test.tscn
-res://Assets/Scripts/custom_audio_resource.gd
-res://Assets/Scripts/AudioData.gd
-res://Assets/Resources/AudioRefs.tres
+res://default_bus_layout.tres
 res://Danae/Assets/Scenes/Danae_test.tscn
+res://Danae/Assets/Scripts/AudioManager.gd
