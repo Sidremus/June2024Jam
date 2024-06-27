@@ -3,3 +3,6 @@
 /.godot/imported
 
 assets
+/.godot/editor
+/.godot
+.godot
