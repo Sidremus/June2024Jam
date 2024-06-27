@@ -1,0 +1,242 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjbeb5o03mgjp"]
+
+[ext_resource type="Texture2D" uid="uid://xopt6ea6ggng" path="res://Sid/2D/BoxWood.png" id="1_clt6s"]
+[ext_resource type="Script" path="res://Sid/Scripts/StringPullingTestController.gd" id="2_y5wue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0aq6"]
+size = Vector2(50, 50)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gxhql"]
+radius = 3.0
+height = 15.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xnkax"]
+
+[node name="World" type="Node2D"]
+
+[node name="StringBase" type="RigidBody2D" parent="."]
+position = Vector2(799, 505)
+mass = 500.0
+gravity_scale = 0.0
+linear_damp = 2.0
+angular_damp = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StringBase"]
+position = Vector2(0, -25)
+shape = SubResource("RectangleShape2D_u0aq6")
+
+[node name="BoxWood" type="Sprite2D" parent="StringBase"]
+texture_filter = 1
+position = Vector2(0, -25)
+scale = Vector2(0.174718, 0.174718)
+texture = ExtResource("1_clt6s")
+
+[node name="PinJoint2D1" type="PinJoint2D" parent="."]
+position = Vector2(818, 505)
+node_a = NodePath("../StringBase")
+node_b = NodePath("../StringSegment1")
+
+[node name="StringSegment1" type="RigidBody2D" parent="."]
+position = Vector2(818, 505)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment1"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+position = Vector2(818, 519)
+node_a = NodePath("../StringSegment1")
+node_b = NodePath("../StringSegment2")
+
+[node name="StringSegment2" type="RigidBody2D" parent="."]
+position = Vector2(818, 519)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment2"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+position = Vector2(818, 533)
+node_a = NodePath("../StringSegment2")
+node_b = NodePath("../StringSegment3")
+
+[node name="StringSegment3" type="RigidBody2D" parent="."]
+position = Vector2(818, 533)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment3"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="."]
+position = Vector2(818, 547)
+node_a = NodePath("../StringSegment3")
+node_b = NodePath("../StringSegment4")
+
+[node name="StringSegment4" type="RigidBody2D" parent="."]
+position = Vector2(818, 547)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment4"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="."]
+position = Vector2(818, 562)
+node_a = NodePath("../StringSegment4")
+node_b = NodePath("../StringSegment5")
+
+[node name="StringSegment5" type="RigidBody2D" parent="."]
+position = Vector2(818, 562)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment5"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D6" type="PinJoint2D" parent="."]
+position = Vector2(818, 576)
+node_a = NodePath("../StringSegment5")
+node_b = NodePath("../StringSegment6")
+
+[node name="StringSegment6" type="RigidBody2D" parent="."]
+position = Vector2(818, 576)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment6"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D7" type="PinJoint2D" parent="."]
+position = Vector2(818, 590)
+node_a = NodePath("../StringSegment6")
+node_b = NodePath("../StringSegment7")
+
+[node name="StringSegment7" type="RigidBody2D" parent="."]
+position = Vector2(818, 590)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment7"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D8" type="PinJoint2D" parent="."]
+position = Vector2(818, 604)
+node_a = NodePath("../StringSegment7")
+node_b = NodePath("../StringSegment8")
+
+[node name="StringSegment8" type="RigidBody2D" parent="."]
+position = Vector2(818, 604)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment8"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D9" type="PinJoint2D" parent="."]
+position = Vector2(818, 618)
+node_a = NodePath("../StringSegment8")
+node_b = NodePath("../StringSegment9")
+
+[node name="StringSegment9" type="RigidBody2D" parent="."]
+position = Vector2(818, 618)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment9"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D10" type="PinJoint2D" parent="."]
+position = Vector2(818, 632)
+node_a = NodePath("../StringSegment9")
+node_b = NodePath("../StringSegment10")
+
+[node name="StringSegment10" type="RigidBody2D" parent="."]
+position = Vector2(818, 632)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment10"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D11" type="PinJoint2D" parent="."]
+position = Vector2(818, 647)
+node_a = NodePath("../StringSegment10")
+node_b = NodePath("../StringSegment11")
+
+[node name="StringSegment11" type="RigidBody2D" parent="."]
+position = Vector2(818, 647)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment11"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D12" type="PinJoint2D" parent="."]
+position = Vector2(818, 661)
+node_a = NodePath("../StringSegment11")
+node_b = NodePath("../StringSegment12")
+
+[node name="StringSegment12" type="RigidBody2D" parent="."]
+position = Vector2(818, 661)
+gravity_scale = 0.0
+linear_damp = 1.0
+angular_damp = 1.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StringSegment12"]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_gxhql")
+
+[node name="PinJoint2D13" type="PinJoint2D" parent="."]
+position = Vector2(818, 676)
+node_a = NodePath("../StringSegment12")
+node_b = NodePath("../StringEnd")
+
+[node name="StringEnd" type="RigidBody2D" parent="."]
+position = Vector2(818, 676)
+mass = 50.0
+gravity_scale = 0.0
+linear_damp = 1.0
+script = ExtResource("2_y5wue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StringEnd"]
+shape = SubResource("CircleShape2D_xnkax")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(707, 775, 748, 612, 727, 576, 690, 574, 668, 627, 702, 650)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(931, 416, 1003, 496, 958, 529, 914, 499, 943, 476)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(758, 431, 787, 397, 796, 431, 746, 487)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(823, 567)
+zoom = Vector2(2, 2)

@@ -1,0 +1,168 @@
+[gd_scene load_steps=10 format=3 uid="uid://b2ss8px1eh22j"]
+
+[ext_resource type="Texture2D" uid="uid://cxv22vupxunbq" path="res://Sid/2D/grid.png" id="1_kccev"]
+[ext_resource type="Texture2D" uid="uid://djlkb5mtesj25" path="res://Sid/2D/default particle custom blurred.png" id="2_8qjum"]
+[ext_resource type="Texture2D" uid="uid://xopt6ea6ggng" path="res://Sid/2D/BoxWood.png" id="3_dmpc8"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dxepu"]
+light_mode = 2
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_c1epu"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jg718"]
+polygon = PackedVector2Array(141.002, -147.937, 147.937, -138.691, 147.937, 141.002, 143.314, 150.248, -138.691, 150.248, -145.625, 138.691, -145.625, -138.691, -141.002, -147.937)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_t2ids"]
+light_mode = 2
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qx1cb"]
+polygon = PackedVector2Array(130, 1462, -90, 1466, -88, -1452, 118, -1458)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dvjbf"]
+blend_mode = 1
+
+[node name="LightingTestScene" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.556529, 0.396715, 0.303019, 1)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_dxepu")
+offset_left = -1319.0
+offset_top = -1438.0
+offset_right = 9286.0
+offset_bottom = 7801.0
+texture = ExtResource("1_kccev")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="BoxWood" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_c1epu")
+position = Vector2(835, 785)
+scale = Vector2(0.432617, 0.432617)
+texture = ExtResource("3_dmpc8")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="BoxWood"]
+occluder = SubResource("OccluderPolygon2D_jg718")
+
+[node name="BoxWood2" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_c1epu")
+position = Vector2(1336, 352)
+scale = Vector2(0.432617, 0.432617)
+texture = ExtResource("3_dmpc8")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="BoxWood2"]
+occluder = SubResource("OccluderPolygon2D_jg718")
+
+[node name="BoxWood3" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_c1epu")
+position = Vector2(1425, 704)
+scale = Vector2(0.432617, 0.432617)
+texture = ExtResource("3_dmpc8")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="BoxWood3"]
+occluder = SubResource("OccluderPolygon2D_jg718")
+
+[node name="BoxWood4" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_c1epu")
+position = Vector2(1139, 380)
+scale = Vector2(-0.705676, -0.705676)
+texture = ExtResource("3_dmpc8")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="BoxWood4"]
+occluder = SubResource("OccluderPolygon2D_jg718")
+
+[node name="Wall" type="Sprite2D" parent="."]
+modulate = Color(0.415433, 0.415433, 0.415433, 1)
+texture_repeat = 2
+material = SubResource("CanvasItemMaterial_t2ids")
+position = Vector2(1861, 517)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kccev")
+region_enabled = true
+region_rect = Rect2(-2.56372, -1612.9, 248.564, 2913.72)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Wall"]
+occluder = SubResource("OccluderPolygon2D_qx1cb")
+
+[node name="Wall3" type="Sprite2D" parent="."]
+modulate = Color(0.415433, 0.415433, 0.415433, 1)
+texture_repeat = 2
+material = SubResource("CanvasItemMaterial_t2ids")
+position = Vector2(280.25, 153.002)
+rotation = -1.57079
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kccev")
+region_enabled = true
+region_rect = Rect2(-2.56372, -1612.9, 248.564, 2913.72)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Wall3"]
+occluder = SubResource("OccluderPolygon2D_qx1cb")
+
+[node name="Wall4" type="Sprite2D" parent="."]
+modulate = Color(0.415433, 0.415433, 0.415433, 1)
+texture_repeat = 2
+material = SubResource("CanvasItemMaterial_t2ids")
+position = Vector2(1980, 153.002)
+rotation = -1.57079
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kccev")
+region_enabled = true
+region_rect = Rect2(-2.56372, -1612.9, 248.564, 2913.72)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Wall4"]
+occluder = SubResource("OccluderPolygon2D_qx1cb")
+
+[node name="Wall5" type="Sprite2D" parent="."]
+modulate = Color(0.415433, 0.415433, 0.415433, 1)
+texture_repeat = 2
+material = SubResource("CanvasItemMaterial_t2ids")
+position = Vector2(694, 1098)
+rotation = -4.71238
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kccev")
+region_enabled = true
+region_rect = Rect2(-2.56372, -1612.9, 248.564, 2913.72)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Wall5"]
+occluder = SubResource("OccluderPolygon2D_qx1cb")
+
+[node name="Wall6" type="Sprite2D" parent="."]
+modulate = Color(0.415433, 0.415433, 0.415433, 1)
+texture_repeat = 2
+material = SubResource("CanvasItemMaterial_t2ids")
+position = Vector2(2147, 1098)
+rotation = -4.71238
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kccev")
+region_enabled = true
+region_rect = Rect2(-2.56372, -1612.9, 248.564, 2913.72)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Wall6"]
+occluder = SubResource("OccluderPolygon2D_qx1cb")
+
+[node name="Wall2" type="Sprite2D" parent="."]
+modulate = Color(0.415433, 0.415433, 0.415433, 1)
+texture_repeat = 2
+material = SubResource("CanvasItemMaterial_t2ids")
+position = Vector2(63, 522)
+rotation = -3.14159
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kccev")
+region_enabled = true
+region_rect = Rect2(-2.56372, -1612.9, 248.564, 2913.72)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Wall2"]
+occluder = SubResource("OccluderPolygon2D_qx1cb")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1116, 658)
+blend_mode = 2
+shadow_enabled = true
+texture = ExtResource("2_8qjum")
+texture_scale = 11.95
+
+[node name="DefaultParticleCustomBlurred" type="Sprite2D" parent="PointLight2D"]
+modulate = Color(1, 1, 1, 0.490196)
+material = SubResource("CanvasItemMaterial_dvjbf")
+scale = Vector2(3.00424, 3.00424)
+texture = ExtResource("2_8qjum")
