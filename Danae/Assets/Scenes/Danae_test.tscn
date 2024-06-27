@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://dt0hyj03in7eu"]
+
+[ext_resource type="Script" path="res://Danae/Assets/Scripts/AudioManager.gd" id="1_j2t16"]
+[ext_resource type="AudioStream" uid="uid://b4jgm1omcr8qc" path="res://Danae/Assets/Audio/ambience_v4.mp3" id="2_o3mag"]
+[ext_resource type="Script" path="res://Danae/Assets/Scripts/AudioData.gd" id="2_pgys5"]
+[ext_resource type="AudioStream" uid="uid://278byl86ye6r" path="res://Danae/Assets/Audio/Ellen_Emotes_Jumps_01.ogg" id="3_ol708"]
+[ext_resource type="Script" path="res://Danae/Assets/Scenes/PlayerController.gd" id="4_2yju8"]
+
+[sub_resource type="Resource" id="Resource_fqm6a"]
+script = ExtResource("2_pgys5")
+Music = Array[AudioStream]([ExtResource("2_o3mag")])
+UI = Array[AudioStream]([])
+Player = Array[AudioStream]([ExtResource("3_ol708")])
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_miagd"]
+
+[node name="DanaeTest" type="Node2D"]
+
+[node name="AudioManager" type="Node" parent="."]
+script = ExtResource("1_j2t16")
+refs = SubResource("Resource_fqm6a")
+
+[node name="Music" type="AudioStreamPlayer" parent="AudioManager"]
+stream = SubResource("AudioStreamPolyphonic_miagd")
+volume_db = -80.0
+max_polyphony = 4
+bus = &"Music"
+
+[node name="JumpSFX" type="AudioStreamPlayer" parent="AudioManager"]
+stream = ExtResource("3_ol708")
+bus = &"SFX"
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("4_2yju8")
+
+[connection signal="hurt" from="Player" to="AudioManager" method="_on_player_hurt"]

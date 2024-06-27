@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://yxpfkbnikd5y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wf6cj"]
+size = Vector2(899.5, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k80cb"]
+size = Vector2(899.5, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jy5ef"]
+size = Vector2(1721.75, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i30pm"]
+size = Vector2(1104, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y847q"]
+size = Vector2(192, 12.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r30kc"]
+size = Vector2(192, 12.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ext8g"]
+size = Vector2(192, 12.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="World" type="Node" parent="."]
+
+[node name="WALLS" type="Node" parent="World"]
+
+[node name="Main walls" type="StaticBody2D" parent="World/WALLS"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/WALLS/Main walls"]
+visible = false
+polygon = PackedVector2Array(257, 160, 353, 68, 532, 136, 480, 237, 738, 283, 242, 258)
+
+[node name="Wall SW" type="CollisionShape2D" parent="World/WALLS/Main walls"]
+position = Vector2(444.5, 1088)
+shape = SubResource("RectangleShape2D_wf6cj")
+
+[node name="Wall SE" type="CollisionShape2D" parent="World/WALLS/Main walls"]
+position = Vector2(1472, 1088)
+shape = SubResource("RectangleShape2D_k80cb")
+
+[node name="Wall N" type="CollisionShape2D" parent="World/WALLS/Main walls"]
+position = Vector2(1060.88, -0.5)
+shape = SubResource("RectangleShape2D_jy5ef")
+
+[node name="Wall E" type="CollisionShape2D" parent="World/WALLS/Main walls"]
+position = Vector2(1920.5, 544)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_i30pm")
+
+[node name="Wall W" type="CollisionShape2D" parent="World/WALLS/Main walls"]
+position = Vector2(0, 544)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_i30pm")
+
+[node name="Maze walls" type="StaticBody2D" parent="World/WALLS"]
+
+[node name="Wall" type="CollisionShape2D" parent="World/WALLS/Maze walls"]
+position = Vector2(896, 1000)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_y847q")
+
+[node name="Wall2" type="CollisionShape2D" parent="World/WALLS/Maze walls"]
+position = Vector2(1024, 904)
+rotation = 1.5708
+scale = Vector2(2.09791, 1)
+shape = SubResource("RectangleShape2D_r30kc")
+
+[node name="Wall3" type="CollisionShape2D" parent="World/WALLS/Maze walls"]
+position = Vector2(960, 560)
+rotation = 1.5708
+scale = Vector2(1.555, 1)
+shape = SubResource("RectangleShape2D_ext8g")
