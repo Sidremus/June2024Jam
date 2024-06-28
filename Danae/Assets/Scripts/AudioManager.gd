@@ -1,14 +1,18 @@
 extends Node
-@onready var music = $Music
-@onready var player = $"../Player"
+
 @export var refs: AudioData
+
+@onready var music = $AudioManager/Music
+@onready var ui = $AudioManager/UI
+var menuNode
 
 var musicEQ
 var musicGAIN
+var path
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	print(get_parent().name)
 	musicEQ=AudioServer.get_bus_effect(1,1)
 	musicGAIN=AudioServer.get_bus_effect(1,0)
 	#print(musicEQ.cutoff_hz)
@@ -71,3 +75,12 @@ func lowerMusic():
 func change_audio_bus_volume(index:int, volume: float):
 	#var index =AudioServer.get_bus_index("bus name")
 	AudioServer.set_bus_volume_db(index, volume)
+
+func _on_main_menu_start_game():
+	print("hi")
+	pass # Replace with function body.
+
+
+func _on_main_menu_quit_game():
+	
+	pass # Replace with function body.

@@ -10,11 +10,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_just_pressed("jump") and isGrounded:
-		print("jumping")
-		jump_sfx.play()
-		emit_signal("hurt")
-		isGrounded=false
-		await get_tree().create_timer(2.).timeout
-		isGrounded=true
+	pass
+	#if Input.is_action_just_pressed("jump") and isGrounded:
+		#print("jumping")
+		#jump_sfx.play()
+		#emit_signal("hurt")
+		#isGrounded=false
+		#await get_tree().create_timer(2.).timeout
+		#isGrounded=true
 	

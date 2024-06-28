@@ -524,7 +524,6 @@ linear_damp = 0.5
 angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Box"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_w0sks")
 
 [node name="Sprite" type="Sprite2D" parent="World/Box"]
@@ -544,7 +543,6 @@ linear_damp = 0.5
 angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Box2"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_w0sks")
 
 [node name="Sprite" type="Sprite2D" parent="World/Box2"]
@@ -564,7 +562,6 @@ linear_damp = 0.5
 angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Box3"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_w0sks")
 
 [node name="Sprite" type="Sprite2D" parent="World/Box3"]
@@ -584,7 +581,6 @@ linear_damp = 0.5
 angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Box4"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_w0sks")
 
 [node name="Sprite" type="Sprite2D" parent="World/Box4"]
@@ -612,7 +608,6 @@ texture = ExtResource("2_oxoyu")
 occluder = SubResource("OccluderPolygon2D_jg718")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Box5"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_y82r6")
 
 [node name="Wall" type="Sprite2D" parent="World"]

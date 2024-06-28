@@ -1,6 +1,4 @@
 res://default_bus_layout.tres
-<<<<<<< Updated upstream
-res://Danae/Assets/Scenes/hellooooo.tscn
-=======
-res://Danae/Assets/Scenes/Danae_test.tscn
->>>>>>> Stashed changes
+res://Danae/Assets/Scenes/main_menu.tscn
+res://Danae/Assets/Scenes/Game.tscn
+res://Danae/Assets/Scenes/Audio.tscn

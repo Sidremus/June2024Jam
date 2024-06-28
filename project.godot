@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="June2024Jam"
-run/main_scene="res://Danae/Assets/Scenes/Danae_test.tscn"
+run/main_scene="res://Danae/Assets/Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://Danae/Assets/Scripts/Global.gd"
-DanaeTest="*res://Danae/Assets/Scenes/Danae_test.tscn"
+Audio="*res://Danae/Assets/Scenes/Audio.tscn"
 
 [display]
 

@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="AudioData" load_steps=3 format=3 uid="uid://dw0obe8qtc8hs"]
+[gd_resource type="Resource" script_class="AudioData" load_steps=5 format=3 uid="uid://dw0obe8qtc8hs"]
 
-[ext_resource type="AudioStream" uid="uid://bo3xmsif0ax6u" path="res://Danae/Assets/Audio/Gameplay.ogg" id="1_oo6c2"]
+[ext_resource type="AudioStream" uid="uid://b4jgm1omcr8qc" path="res://Danae/Assets/Audio/ambience_v4.mp3" id="1_k6xdf"]
 [ext_resource type="Script" path="res://Danae/Assets/Scripts/AudioData.gd" id="1_ubh24"]
+[ext_resource type="AudioStream" uid="uid://x1w2ea457l8w" path="res://Danae/Assets/Audio/sfx-001.mp3" id="2_jdgvp"]
+[ext_resource type="AudioStream" uid="uid://bkvye4t3k1skg" path="res://Danae/Assets/Audio/sfx-002.mp3" id="3_ul38l"]
 
 [resource]
 script = ExtResource("1_ubh24")
-Music = Array[AudioStream]([ExtResource("1_oo6c2")])
-UI = Array[AudioStream]([])
+Music = Array[AudioStream]([ExtResource("1_k6xdf")])
+UI = Array[AudioStream]([ExtResource("2_jdgvp"), ExtResource("3_ul38l")])
+Player = Array[AudioStream]([])
