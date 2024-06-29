@@ -1,9 +1,6 @@
 res://default_bus_layout.tres
-res://Danae/Assets/Scenes/main_menu.tscn
-res://Danae/Assets/Resources/AudioRefs.tres
 res://Danae/Assets/Scenes/Audio.tscn
+res://Danae/Assets/Resources/AudioRefs.tres
 res://Danae/Assets/Scenes/Game.tscn
-res://Danae/Assets/Scenes/ui_text.tscn
+res://Sid/Scenes/character_controller_test_scene.tscn
 res://Danae/Assets/Scenes/blockout_v1.0.tscn
-res://Danae/Assets/Scenes/blockout tests.tscn
-res://Danae/Assets/Scripts/AudioManager.gd

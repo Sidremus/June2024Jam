@@ -7,3 +7,7 @@ class_name AudioData
 @export var UI : Array [AudioStream]
 
 @export var Player : Array [AudioStream]
+
+@export var Puppets : Array [AudioStream]
+
+@export var Interactables : Array [AudioStream]

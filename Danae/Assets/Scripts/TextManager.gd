@@ -17,3 +17,7 @@ func _fadeTextIn():
 func _textAnimation():
 	await get_tree().create_timer(3.5).timeout
 	_fadeTextIn()
+
+
+
+	

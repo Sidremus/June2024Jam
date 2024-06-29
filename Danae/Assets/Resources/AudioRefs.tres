@@ -1,13 +1,18 @@
-[gd_resource type="Resource" script_class="AudioData" load_steps=6 format=3 uid="uid://dw0obe8qtc8hs"]
+[gd_resource type="Resource" script_class="AudioData" load_steps=9 format=3 uid="uid://dw0obe8qtc8hs"]
 
 [ext_resource type="AudioStream" uid="uid://b4jgm1omcr8qc" path="res://Danae/Assets/Audio/ambience_v4.mp3" id="1_k6xdf"]
 [ext_resource type="Script" path="res://Danae/Assets/Scripts/AudioData.gd" id="1_ubh24"]
 [ext_resource type="AudioStream" uid="uid://d2lx1dsjtae48" path="res://Danae/Assets/Audio/sfx_dragging_loop.mp3" id="2_8rpi8"]
+[ext_resource type="AudioStream" uid="uid://ji2oifka60sl" path="res://Danae/Assets/Audio/sfx_vspuppet_selected.mp3" id="3_ktqyq"]
 [ext_resource type="AudioStream" uid="uid://x1w2ea457l8w" path="res://Danae/Assets/Audio/sfx-001.mp3" id="3_sci1o"]
+[ext_resource type="AudioStream" uid="uid://cvsb8hvqoa6us" path="res://Danae/Assets/Audio/sfx_mbpuppet_selected.mp3" id="4_3jrxu"]
 [ext_resource type="AudioStream" uid="uid://co24lxu8ecuto" path="res://Danae/Assets/Audio/sfx_hover.mp3" id="4_01080"]
+[ext_resource type="AudioStream" uid="uid://dlcdgx6a8cd7f" path="res://Danae/Assets/Audio/sfx_dtpuppet_selected.mp3" id="5_pu2tx"]
 
 [resource]
 script = ExtResource("1_ubh24")
 Music = Array[AudioStream]([ExtResource("1_k6xdf")])
 UI = Array[AudioStream]([ExtResource("3_sci1o"), ExtResource("4_01080")])
 Player = Array[AudioStream]([ExtResource("2_8rpi8")])
+Puppets = Array[AudioStream]([ExtResource("3_ktqyq"), ExtResource("4_3jrxu"), ExtResource("5_pu2tx")])
+Interactables = Array[AudioStream]([null, null])

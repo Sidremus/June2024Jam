@@ -106,6 +106,3 @@ func _process(delta):
 	elif Input.is_action_just_pressed("jump") and isMoving:
 		_stopDragPlayerSFX()
 		isMoving =false
-
-
-

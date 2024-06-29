@@ -1,15 +1,14 @@
+TextureRect
+ColorRect
 AudioStreamPlayer
 Polygon2D
 StaticBody2D
 Line2D
 AnimationPlayer
 Label
-ColorRect
 CanvasLayer
 VideoStreamPlayer
 Button
 VBoxContainer
 CanvasModulate
 Control
-RichTextLabel
-MeshInstance2D

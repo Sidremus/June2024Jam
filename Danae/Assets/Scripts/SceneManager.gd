@@ -9,8 +9,6 @@ func _ready():
 	_hideGroupNodes(group1_nodes)
 	pass # Replace with function body.
 	
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
@@ -25,5 +23,9 @@ func _revealGroupNodes (group):
 
 func _on_play_button_pressed():
 	main_menu.queue_free()
-	_revealGroupNodes(group1_nodes)
+	
 	ui_text._textAnimation()
+	
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name=="fade_to_normal":
+		_revealGroupNodes(group1_nodes)
