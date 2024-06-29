@@ -2,11 +2,11 @@ extends Node
 
 @export var refs: AudioData
 @onready var ui = $AudioManager/UI
-
+@onready var player = $AudioManager/Player
 @onready var music = $AudioManager/Music
 
 var uiPlayer
-
+var isMoving=false
 var musicEQ
 var musicGAIN
 
@@ -29,6 +29,7 @@ func _ready():
 	
 	#AudioServer.set_bus_volume_db(1,-80)  #ORIGINAL CMD
 	
+######################### VOLUME CONTROL ##############################
 
 func _fadeIn(audioPlayer,time):
 
@@ -43,13 +44,15 @@ func _fadeOut(audioPlayer,time):
 	var tween=get_tree().create_tween()
 	tween.set_ease(Tween.EASE_IN)
 	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(music,"volume_db",-80., time)
+	tween.tween_property(audioPlayer,"volume_db",-80., time)
 	await get_tree().create_timer(time).timeout
 	audioPlayer.stop()
 
 func _crossFade(audioPlayer_1, audioPlayer_2, time):
 	_fadeIn(audioPlayer_2, time)
 	_fadeOut(audioPlayer_1, time)
+
+######################### SNAPSHOTS ##############################
 
 func _getHurtSnapshot():
 	var hurtTween=get_tree().create_tween()
@@ -64,26 +67,45 @@ func _getHurtSnapshot():
 	#hurtTween.tween_property(musicGAIN,"volume_db",-20.,0.25) #WORKS
 	#hurtTween.tween_property(musicGAIN,"volume_db",0.,1.) #WORKS
 
-
 func _on_player_hurt():
 	_getHurtSnapshot()
 
 func lowerMusic():
 	AudioServer.set_bus_volume_db(1, -20)
 
-func change_audio_bus_volume(index:int, volume: float):
-	#var index =AudioServer.get_bus_index("bus name")
-	AudioServer.set_bus_volume_db(index, volume)
+######################### MENU SFX ##############################
 
 func _on_main_menu_start_game():
-	print("hi")
+	ui.stream=refs.UI[0]
 	ui.play()
-	#var stream=refs.UI[0]
-	#ui.set_stream(stream)
+
+func _on_play_button_mouse_entered():
+	ui.stream=refs.UI[1]
+	ui.pitch_scale=1.0
+	ui.play()
+func _on_quit_button_mouse_entered():
+	ui.stream=refs.UI[1]
+	ui.pitch_scale=0.6
+	ui.play()
+
+######################### PLAYER SFX ##############################
 	
-	pass # Replace with function body.
+func _dragPlayerSFX():
+	player.stream=refs.Player[0]
+	_fadeIn(player,0.5)
+	
+func _stopDragPlayerSFX():
+	_fadeOut(player,1.0)
+	
+######################### update ##############################
+
+func _process(delta):
+	if Input.is_action_just_pressed("jump") and !isMoving:
+		_dragPlayerSFX()
+		isMoving =true
+	elif Input.is_action_just_pressed("jump") and isMoving:
+		_stopDragPlayerSFX()
+		isMoving =false
 
 
-func _on_main_menu_quit_game():
-	print("bye")
-	pass # Replace with function body.
+

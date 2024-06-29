@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://gbn13fogjne8"]
+
+[ext_resource type="Script" path="res://Danae/Assets/Scripts/land_prototype.gd" id="1_fhx8k"]
+[ext_resource type="Texture2D" uid="uid://kob5ntct4778" path="res://Danae/Assets/Visuals/block_dirt.png" id="2_xswds"]
+
+[node name="BlockoutTests" type="StaticBody2D"]
+collision_layer = 2
+script = ExtResource("1_fhx8k")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+texture_repeat = 2
+position = Vector2(525, 462)
+texture = ExtResource("2_xswds")
+polygon = PackedVector2Array(64, 64, 768, 64, 768, 78, 64, 77)

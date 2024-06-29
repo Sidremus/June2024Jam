@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="AudioData" load_steps=4 format=3 uid="uid://dw0obe8qtc8hs"]
+[gd_resource type="Resource" script_class="AudioData" load_steps=6 format=3 uid="uid://dw0obe8qtc8hs"]
 
 [ext_resource type="AudioStream" uid="uid://b4jgm1omcr8qc" path="res://Danae/Assets/Audio/ambience_v4.mp3" id="1_k6xdf"]
 [ext_resource type="Script" path="res://Danae/Assets/Scripts/AudioData.gd" id="1_ubh24"]
-[ext_resource type="AudioStream" uid="uid://bkvye4t3k1skg" path="res://Danae/Assets/Audio/sfx-002.mp3" id="3_ul38l"]
+[ext_resource type="AudioStream" uid="uid://d2lx1dsjtae48" path="res://Danae/Assets/Audio/sfx_dragging_loop.mp3" id="2_8rpi8"]
+[ext_resource type="AudioStream" uid="uid://x1w2ea457l8w" path="res://Danae/Assets/Audio/sfx-001.mp3" id="3_sci1o"]
+[ext_resource type="AudioStream" uid="uid://co24lxu8ecuto" path="res://Danae/Assets/Audio/sfx_hover.mp3" id="4_01080"]
 
 [resource]
 script = ExtResource("1_ubh24")
 Music = Array[AudioStream]([ExtResource("1_k6xdf")])
-UI = Array[AudioStream]([ExtResource("3_ul38l")])
-Player = Array[AudioStream]([])
+UI = Array[AudioStream]([ExtResource("3_sci1o"), ExtResource("4_01080")])
+Player = Array[AudioStream]([ExtResource("2_8rpi8")])

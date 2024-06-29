@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b12cjkf4r5bi3"]
+[gd_scene load_steps=6 format=3 uid="uid://b12cjkf4r5bi3"]
 
 [ext_resource type="PackedScene" uid="uid://bst4j8b3dheyv" path="res://Danae/Assets/Scenes/main_menu.tscn" id="1_wkuu7"]
-[ext_resource type="Script" path="res://Danae/Assets/Scenes/SceneManager.gd" id="1_y0kpd"]
-[ext_resource type="AudioStream" uid="uid://x1w2ea457l8w" path="res://Danae/Assets/Audio/sfx-001.mp3" id="2_qyfys"]
+[ext_resource type="Script" path="res://Danae/Assets/Scripts/SceneManager.gd" id="1_y0kpd"]
 [ext_resource type="PackedScene" uid="uid://d0lis08e6g0uc" path="res://Danae/Assets/Scenes/Audio.tscn" id="3_14x1i"]
 [ext_resource type="PackedScene" uid="uid://yxpfkbnikd5y" path="res://Danae/Assets/Scenes/blockout_v1.0.tscn" id="4_f64l2"]
 [ext_resource type="PackedScene" uid="uid://ccx351glojkvl" path="res://Danae/Assets/Scenes/ui_text.tscn" id="6_op10v"]
@@ -11,9 +10,6 @@
 script = ExtResource("1_y0kpd")
 
 [node name="Audio" parent="." instance=ExtResource("3_14x1i")]
-
-[node name="UI" parent="Audio/AudioManager" index="1"]
-stream = ExtResource("2_qyfys")
 
 [node name="Main menu" parent="." instance=ExtResource("1_wkuu7")]
 top_level = true
@@ -60,7 +56,9 @@ offset_bottom = 1074.0
 [node name="Main walls" parent="Blockout/World/WALLS" index="1" groups=["Walls"]]
 
 [connection signal="startGame" from="Main menu" to="Audio" method="_on_main_menu_start_game"]
+[connection signal="mouse_entered" from="Main menu/VBoxContainer/Play Button" to="Audio" method="_on_play_button_mouse_entered"]
 [connection signal="pressed" from="Main menu/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="Main menu/VBoxContainer/Quit Button" to="Audio" method="_on_quit_button_mouse_entered"]
 
 [editable path="Audio"]
 [editable path="Main menu"]

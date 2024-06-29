@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Danae/Assets/Scripts/Global.gd"
-Audio="*res://Danae/Assets/Scenes/Audio.tscn"
 
 [display]
 

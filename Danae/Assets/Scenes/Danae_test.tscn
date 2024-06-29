@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Danae/Assets/Scripts/AudioManager.gd" id="1_j2t16"]
 [ext_resource type="AudioStream" uid="uid://b4jgm1omcr8qc" path="res://Danae/Assets/Audio/ambience_v4.mp3" id="2_o3mag"]
 [ext_resource type="Script" path="res://Danae/Assets/Scripts/AudioData.gd" id="2_pgys5"]
-[ext_resource type="AudioStream" uid="uid://278byl86ye6r" path="res://Danae/Assets/Audio/Ellen_Emotes_Jumps_01.ogg" id="3_ol708"]
-[ext_resource type="Script" path="res://Danae/Assets/Scenes/PlayerController.gd" id="4_2yju8"]
+[ext_resource type="AudioStream" path="res://Danae/Assets/Audio/Ellen_Emotes_Jumps_01.ogg" id="3_ol708"]
+[ext_resource type="Script" path="res://Danae/Assets/Scripts/PlayerController.gd" id="4_2yju8"]
 [ext_resource type="AudioStream" uid="uid://x1w2ea457l8w" path="res://Danae/Assets/Audio/sfx-001.mp3" id="4_m7ilu"]
 [ext_resource type="AudioStream" uid="uid://bkvye4t3k1skg" path="res://Danae/Assets/Audio/sfx-002.mp3" id="5_evipf"]
 
