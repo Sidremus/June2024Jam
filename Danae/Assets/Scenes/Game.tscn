@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b12cjkf4r5bi3"]
+[gd_scene load_steps=7 format=3 uid="uid://b12cjkf4r5bi3"]
 
 [ext_resource type="PackedScene" uid="uid://bst4j8b3dheyv" path="res://Danae/Assets/Scenes/main_menu.tscn" id="1_wkuu7"]
 [ext_resource type="Script" path="res://Danae/Assets/Scenes/SceneManager.gd" id="1_y0kpd"]
 [ext_resource type="AudioStream" uid="uid://x1w2ea457l8w" path="res://Danae/Assets/Audio/sfx-001.mp3" id="2_qyfys"]
 [ext_resource type="PackedScene" uid="uid://d0lis08e6g0uc" path="res://Danae/Assets/Scenes/Audio.tscn" id="3_14x1i"]
 [ext_resource type="PackedScene" uid="uid://yxpfkbnikd5y" path="res://Danae/Assets/Scenes/blockout_v1.0.tscn" id="4_f64l2"]
+[ext_resource type="PackedScene" uid="uid://ccx351glojkvl" path="res://Danae/Assets/Scenes/ui_text.tscn" id="6_op10v"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_y0kpd")
@@ -20,17 +21,48 @@ top_level = true
 [node name="ColorRect" parent="Main menu" index="1"]
 color = Color(0.317647, 0.317647, 0.317647, 1)
 
+[node name="UiText" parent="." instance=ExtResource("6_op10v")]
+
+[node name="Intro1" parent="UiText" index="0"]
+offset_left = 3.0
+offset_top = 0.0
+offset_right = 1925.0
+offset_bottom = 1074.0
+
+[node name="Intro2" parent="UiText" index="1"]
+offset_left = 3.0
+offset_top = 0.0
+offset_right = 1925.0
+offset_bottom = 1074.0
+
+[node name="Intro3" parent="UiText" index="2"]
+offset_left = 3.0
+offset_top = 0.0
+offset_right = 1925.0
+offset_bottom = 1074.0
+
+[node name="Intro4" parent="UiText" index="3"]
+offset_left = 3.0
+offset_top = 0.0
+offset_right = 1925.0
+offset_bottom = 1074.0
+
+[node name="Intro5" parent="UiText" index="4"]
+offset_left = 3.0
+offset_top = 0.0
+offset_right = 1925.0
+offset_bottom = 1074.0
+
 [node name="Blockout" parent="." instance=ExtResource("4_f64l2")]
 
 [node name="Maze walls" parent="Blockout/World/WALLS" index="0" groups=["Walls"]]
 
 [node name="Main walls" parent="Blockout/World/WALLS" index="1" groups=["Walls"]]
 
-[node name="Icon" parent="Blockout" index="3" groups=["Walls"]]
-
 [connection signal="startGame" from="Main menu" to="Audio" method="_on_main_menu_start_game"]
 [connection signal="pressed" from="Main menu/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
 
 [editable path="Audio"]
 [editable path="Main menu"]
+[editable path="UiText"]
 [editable path="Blockout"]

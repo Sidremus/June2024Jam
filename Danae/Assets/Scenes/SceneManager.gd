@@ -1,5 +1,6 @@
 extends Node2D
 @onready var main_menu = $"Main menu"
+@onready var ui_text = $UiText
 
 var group1_nodes
 # Called when the node enters the scene tree for the first time.
@@ -25,4 +26,4 @@ func _revealGroupNodes (group):
 func _on_play_button_pressed():
 	main_menu.queue_free()
 	_revealGroupNodes(group1_nodes)
-	pass # Replace with function body.
+	ui_text._textAnimation()

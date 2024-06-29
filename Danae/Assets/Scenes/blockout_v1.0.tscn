@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://yxpfkbnikd5y"]
+[gd_scene load_steps=13 format=3 uid="uid://yxpfkbnikd5y"]
 
 [ext_resource type="Shader" path="res://Danae/Assets/Shaders/walls.gdshader" id="1_ffy15"]
-[ext_resource type="Texture2D" uid="uid://cldumfk0e0idw" path="res://icon.svg" id="2_5oweb"]
 [ext_resource type="Texture2D" uid="uid://cxv22vupxunbq" path="res://Sid/2D/grid.png" id="6_yysmq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5mu4t"]
@@ -171,7 +170,3 @@ energy = 0.05
 position = Vector2(968, 544)
 editor_only = true
 energy = 0.5
-
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(1069, 1090)
-texture = ExtResource("2_5oweb")

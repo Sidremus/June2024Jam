@@ -16,5 +16,5 @@ func _fadeTextIn():
 	$AnimationPlayer.play("fade_to_normal")
 	
 func _textAnimation():
-	await get_tree().create_timer(2.).timeout
+	await get_tree().create_timer(5.).timeout
 	_fadeTextIn()
