@@ -1,17 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://b12cjkf4r5bi3"]
+[gd_scene load_steps=6 format=3 uid="uid://b12cjkf4r5bi3"]
 
 [ext_resource type="PackedScene" uid="uid://bst4j8b3dheyv" path="res://Danae/Assets/Scenes/main_menu.tscn" id="1_wkuu7"]
-[ext_resource type="PackedScene" uid="uid://yxpfkbnikd5y" path="res://Danae/Assets/Scenes/blockout_v1.0.tscn" id="2_0dcbo"]
+[ext_resource type="Script" path="res://Danae/Assets/Scenes/SceneManager.gd" id="1_y0kpd"]
+[ext_resource type="AudioStream" uid="uid://x1w2ea457l8w" path="res://Danae/Assets/Audio/sfx-001.mp3" id="2_qyfys"]
 [ext_resource type="PackedScene" uid="uid://d0lis08e6g0uc" path="res://Danae/Assets/Scenes/Audio.tscn" id="3_14x1i"]
+[ext_resource type="PackedScene" uid="uid://yxpfkbnikd5y" path="res://Danae/Assets/Scenes/blockout_v1.0.tscn" id="4_f64l2"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_y0kpd")
 
 [node name="Audio" parent="." instance=ExtResource("3_14x1i")]
+
+[node name="UI" parent="Audio/AudioManager" index="1"]
+stream = ExtResource("2_qyfys")
 
 [node name="Main menu" parent="." instance=ExtResource("1_wkuu7")]
 top_level = true
 
-[node name="Blockout" parent="." instance=ExtResource("2_0dcbo")]
+[node name="ColorRect" parent="Main menu" index="1"]
+color = Color(0.317647, 0.317647, 0.317647, 1)
 
-[connection signal="quitGame" from="Main menu" to="Audio" method="_on_main_menu_quit_game"]
+[node name="Blockout" parent="." instance=ExtResource("4_f64l2")]
+
+[node name="Maze walls" parent="Blockout/World/WALLS" index="0" groups=["Walls"]]
+
+[node name="Main walls" parent="Blockout/World/WALLS" index="1" groups=["Walls"]]
+
+[node name="Icon" parent="Blockout" index="3" groups=["Walls"]]
+
 [connection signal="startGame" from="Main menu" to="Audio" method="_on_main_menu_start_game"]
+[connection signal="pressed" from="Main menu/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
+
+[editable path="Audio"]
+[editable path="Main menu"]
+[editable path="Blockout"]

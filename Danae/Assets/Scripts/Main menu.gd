@@ -14,7 +14,8 @@ func _process(delta):
 
 func _on_play_button_pressed():
 	emit_signal("startGame")
-	get_tree().change_scene_to_file("res://Danae/Assets/Scenes/blockout_v1.0.tscn")
+	await get_tree().create_timer(4.0).timeout
+	#get_tree().change_scene_to_file("res://Danae/Assets/Scenes/blockout_v1.0.tscn")
 	pass
 	
 

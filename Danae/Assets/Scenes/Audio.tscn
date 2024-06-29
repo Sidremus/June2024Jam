@@ -18,4 +18,5 @@ max_polyphony = 2
 bus = &"Music"
 
 [node name="UI" type="AudioStreamPlayer" parent="AudioManager"]
+max_polyphony = 3
 bus = &"SFX"

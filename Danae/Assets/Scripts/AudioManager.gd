@@ -1,18 +1,18 @@
 extends Node
 
 @export var refs: AudioData
+@onready var ui = $AudioManager/UI
 
 @onready var music = $AudioManager/Music
-@onready var ui = $AudioManager/UI
-var menuNode
+
+var uiPlayer
 
 var musicEQ
 var musicGAIN
-var path
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(get_parent().name)
+
 	musicEQ=AudioServer.get_bus_effect(1,1)
 	musicGAIN=AudioServer.get_bus_effect(1,0)
 	#print(musicEQ.cutoff_hz)
@@ -20,7 +20,6 @@ func _ready():
 	music.set_stream(stream)
 	_fadeIn(music, 5.)
 	await get_tree().create_timer(5.).timeout
-	print("music IN")
 	###################################
 
 	#testTween.tween_property(musicEQ,"cutoff_hz",500.,5.) #NOT WORKING
@@ -78,9 +77,13 @@ func change_audio_bus_volume(index:int, volume: float):
 
 func _on_main_menu_start_game():
 	print("hi")
+	ui.play()
+	#var stream=refs.UI[0]
+	#ui.set_stream(stream)
+	
 	pass # Replace with function body.
 
 
 func _on_main_menu_quit_game():
-	
+	print("bye")
 	pass # Replace with function body.
