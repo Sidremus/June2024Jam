@@ -15,7 +15,6 @@ func _process(delta):
 	pass
 
 func _hideGroupNodes (group):
-	print("hiding")
 	for member in group:
 		member.visible=false
 

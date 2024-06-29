@@ -1,7 +1,8 @@
+AnimationPlayer
+Label
 ColorRect
 CanvasLayer
 VideoStreamPlayer
-Label
 Button
 VBoxContainer
 CanvasModulate

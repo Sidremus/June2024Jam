@@ -1,5 +1,7 @@
 res://default_bus_layout.tres
+res://Danae/Assets/Scenes/ui_text.tscn
+res://Danae/Assets/Scripts/Intro_text.gd
 res://Danae/Assets/Scenes/main_menu.tscn
 res://Danae/Assets/Scenes/Audio.tscn
 res://Danae/Assets/Scenes/Game.tscn
-res://Danae/Assets/Scenes/SceneManager.gd
+res://Danae/Assets/Scenes/TextManager.gd
