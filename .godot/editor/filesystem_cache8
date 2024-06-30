@@ -1,6 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1719688475
-default_bus_layout.tres::AudioBusLayout::5489132563905325219::1719688475::0::1::::<><>::
+::res://::1719734227
+default_bus_layout.tres::AudioBusLayout::5489132563905325219::1719734227::0::1::::<><>::
 icon.svg::CompressedTexture2D::5552347829255943492::1719224901::1719224993::1::::<><>::
 ::res://Danae/::1719586617
 ::res://Danae/Assets/::1719666170
@@ -14,20 +14,21 @@ sfx_dtpuppet_selected.mp3::AudioStreamMP3::7935662208317680177::1719688397::1719
 sfx_hover.mp3::AudioStreamMP3::5813005054639409108::1719675211::1719675264::1::::<><>::
 sfx_mbpuppet_selected.mp3::AudioStreamMP3::6284085932399641942::1719688396::1719688474::1::::<><>::
 sfx_vspuppet_selected.mp3::AudioStreamMP3::649879403060558155::1719688396::1719688474::1::::<><>::
-::res://Danae/Assets/Resources/::1719688536
-AudioRefs.tres::Resource/AudioData::8755878140484565892::1719688536::0::1::::<><>::uid://b4jgm1omcr8qc::::res://Danae/Assets/Audio/ambience_v4.mp3<>res://Danae/Assets/Scripts/AudioData.gd<>uid://d2lx1dsjtae48::::res://Danae/Assets/Audio/sfx_dragging_loop.mp3<>uid://ji2oifka60sl::::res://Danae/Assets/Audio/sfx_vspuppet_selected.mp3<>uid://x1w2ea457l8w::::res://Danae/Assets/Audio/sfx-001.mp3<>uid://cvsb8hvqoa6us::::res://Danae/Assets/Audio/sfx_mbpuppet_selected.mp3<>uid://co24lxu8ecuto::::res://Danae/Assets/Audio/sfx_hover.mp3<>uid://dlcdgx6a8cd7f::::res://Danae/Assets/Audio/sfx_dtpuppet_selected.mp3
-::res://Danae/Assets/Scenes/::1719690312
-Audio.tscn::PackedScene::8937210541842922990::1719690312::0::1::::<><>::res://Danae/Assets/Scripts/AudioManager.gd<>uid://dw0obe8qtc8hs::::res://Danae/Assets/Resources/AudioRefs.tres
+::res://Danae/Assets/Resources/::1719736893
+AudioRefs.tres::Resource/AudioData::8755878140484565892::1719736893::0::1::::<><>::uid://b4jgm1omcr8qc::::res://Danae/Assets/Audio/ambience_v4.mp3<>res://Danae/Assets/Scripts/AudioData.gd<>uid://d2lx1dsjtae48::::res://Danae/Assets/Audio/sfx_dragging_loop.mp3<>uid://ji2oifka60sl::::res://Danae/Assets/Audio/sfx_vspuppet_selected.mp3<>uid://x1w2ea457l8w::::res://Danae/Assets/Audio/sfx-001.mp3<>uid://cvsb8hvqoa6us::::res://Danae/Assets/Audio/sfx_mbpuppet_selected.mp3<>uid://co24lxu8ecuto::::res://Danae/Assets/Audio/sfx_hover.mp3<>uid://dlcdgx6a8cd7f::::res://Danae/Assets/Audio/sfx_dtpuppet_selected.mp3<>res://Danae/Assets/Resources/asp.gd
+asp.gd::GDScript::-1::1719736893::0::1::::Asp<>Resource<>::
+::res://Danae/Assets/Scenes/::1719736989
+Audio.tscn::PackedScene::8937210541842922990::1719736989::0::1::::<><>::res://Danae/Assets/Scripts/AudioManager.gd<>uid://dw0obe8qtc8hs::::res://Danae/Assets/Resources/AudioRefs.tres
 blockout tests.tscn::PackedScene::424034670152054405::1719675732::0::1::::<><>::res://Danae/Assets/Scripts/land_prototype.gd<>uid://kob5ntct4778::::res://Danae/Assets/Visuals/block_dirt.png
-blockout_v1.0.tscn::PackedScene::1732933146897228112::1719690312::0::1::::<><>::res://Danae/Assets/Shaders/walls.gdshader<>uid://bs4lk6cu4olpg::::res://Danae/Assets/Visuals/dungeon floor.jpg
+blockout_v1.0.tscn::PackedScene::1732933146897228112::1719736989::0::1::::<><>::res://Danae/Assets/Shaders/walls.gdshader<>uid://c3xx7homy7w4g::::res://Danae/Assets/Visuals/dungeon floor.png
 Danae_test.tscn::PackedScene::8544927914670187972::1719673112::0::1::::<><>::res://Danae/Assets/Scripts/AudioManager.gd<>uid://b4jgm1omcr8qc::::res://Danae/Assets/Audio/ambience_v4.mp3<>res://Danae/Assets/Scripts/AudioData.gd<>res://Danae/Assets/Audio/Ellen_Emotes_Jumps_01.ogg<>res://Danae/Assets/Scripts/PlayerController.gd<>uid://x1w2ea457l8w::::res://Danae/Assets/Audio/sfx-001.mp3<>uid://bkvye4t3k1skg::::res://Danae/Assets/Audio/sfx-002.mp3
-Game.tscn::PackedScene::4267206858071283088::1719690312::0::1::::<><>::uid://bst4j8b3dheyv::::res://Danae/Assets/Scenes/main_menu.tscn<>res://Danae/Assets/Scripts/SceneManager.gd<>uid://d0lis08e6g0uc::::res://Danae/Assets/Scenes/Audio.tscn<>uid://yxpfkbnikd5y::::res://Danae/Assets/Scenes/blockout_v1.0.tscn<>uid://ccx351glojkvl::::res://Danae/Assets/Scenes/ui_text.tscn
+Game.tscn::PackedScene::4267206858071283088::1719736989::0::1::::<><>::uid://bst4j8b3dheyv::::res://Danae/Assets/Scenes/main_menu.tscn<>res://Danae/Assets/Scripts/SceneManager.gd<>uid://d0lis08e6g0uc::::res://Danae/Assets/Scenes/Audio.tscn<>uid://yxpfkbnikd5y::::res://Danae/Assets/Scenes/blockout_v1.0.tscn<>uid://ccx351glojkvl::::res://Danae/Assets/Scenes/ui_text.tscn
 hellooooo.tscn::PackedScene::7765174949760047959::1719506357::0::1::::<><>::
 main_menu.tscn::PackedScene::3690821647532031869::1719686184::0::1::::<><>::res://Danae/Assets/Scripts/Main menu.gd<>res://Danae/Assets/Visuals/mouse-left-click.ogv
 ui_text.tscn::PackedScene::4962454768015044229::1719686184::0::1::::<><>::res://Danae/Assets/Scripts/TextManager.gd
-::res://Danae/Assets/Scripts/::1719686789
-AudioData.gd::GDScript::-1::1719686789::0::1::::AudioData<>Resource<>::
-AudioManager.gd::GDScript::-1::1719685664::0::1::::<>Node<>::
+::res://Danae/Assets/Scripts/::1719736987
+AudioData.gd::GDScript::-1::1719736243::0::1::::AudioData<>Resource<>::
+AudioManager.gd::GDScript::-1::1719736987::0::1::::<>Node<>::
 Global.gd::GDScript::-1::1719506357::0::1::::<>Node<>::
 land_prototype.gd::GDScript::-1::1719673288::0::1::::<>StaticBody2D<>::
 Main menu.gd::GDScript::-1::1719595694::0::1::::<>Control<>::
@@ -36,9 +37,8 @@ SceneManager.gd::GDScript::-1::1719686262::0::1::::<>Node2D<>::
 TextManager.gd::GDScript::-1::1719686117::0::1::::<>Control<>::
 ::res://Danae/Assets/Shaders/::1719586617
 walls.gdshader::Shader::-1::1719560621::0::1::::<><>::
-::res://Danae/Assets/Visuals/::1719690611
+::res://Danae/Assets/Visuals/::1719690776
 block_dirt.png::CompressedTexture2D::730904728019348985::1719671586::1719671607::1::::<><>::
-dungeon floor.jpg::CompressedTexture2D::3710374201166386544::1719688778::1719688787::1::::<><>::
 dungeon floor.png::CompressedTexture2D::6787063703702363192::1719690611::1719690614::1::::<><>::
 green triangle.jpg::CompressedTexture2D::6536104970516213701::1719561317::1719575525::1::::<><>::
 mouse-left-click.ogv::VideoStreamTheora::-1::1719575226::0::1::::<><>::
@@ -50,8 +50,8 @@ default particle custom blurred.png::CompressedTexture2D::7814280349945316232::1
 flame_sprite_sheet.png::CompressedTexture2D::7175638154829746589::1719505279::1719505279::1::::<><>::
 grid.png::CompressedTexture2D::6432225413735838550::1719505279::1719505279::1::::<><>::
 light.png::CompressedTexture2D::2959382248403859167::1719505279::1719505279::1::::<><>::
-::res://Sid/Scenes/::1719690312
-character_controller_test_scene.tscn::PackedScene::239493403611591044::1719690312::0::1::::<><>::uid://cxv22vupxunbq::::res://Sid/2D/grid.png<>uid://xopt6ea6ggng::::res://Sid/2D/BoxWood.png<>uid://djlkb5mtesj25::::res://Sid/2D/default particle custom blurred.png<>res://Sid/Scripts/LightPuppet.gd<>uid://dah6yhd4uimpp::::res://Sid/2D/flame_sprite_sheet.png<>res://Sid/Scripts/PlayerCotroller.gd
+::res://Sid/Scenes/::1719736989
+character_controller_test_scene.tscn::PackedScene::239493403611591044::1719736989::0::1::::<><>::uid://cxv22vupxunbq::::res://Sid/2D/grid.png<>uid://xopt6ea6ggng::::res://Sid/2D/BoxWood.png<>uid://djlkb5mtesj25::::res://Sid/2D/default particle custom blurred.png<>res://Sid/Scripts/LightPuppet.gd<>uid://dah6yhd4uimpp::::res://Sid/2D/flame_sprite_sheet.png<>res://Sid/Scripts/PlayerCotroller.gd
 lighting_test_scene.tscn::PackedScene::4319830923129436675::1719516111::0::1::::<><>::uid://cxv22vupxunbq::::res://Sid/2D/grid.png<>uid://djlkb5mtesj25::::res://Sid/2D/default particle custom blurred.png<>uid://xopt6ea6ggng::::res://Sid/2D/BoxWood.png
 string_test_scene.tscn::PackedScene::3020430906455971097::1719505279::0::1::::<><>::uid://xopt6ea6ggng::::res://Sid/2D/BoxWood.png<>res://Sid/Scripts/StringPullingTestController.gd
 ::res://Sid/Scripts/::1719586617

@@ -4,6 +4,7 @@ extends Node
 @onready var ui = $AudioManager/UI
 @onready var player = $AudioManager/Player
 @onready var music = $AudioManager/Music
+@onready var puppets = $AudioManager/Puppets
 
 var uiPlayer
 var isMoving=false
@@ -16,12 +17,17 @@ func _ready():
 	musicEQ=AudioServer.get_bus_effect(1,1)
 	musicGAIN=AudioServer.get_bus_effect(1,0)
 	#print(musicEQ.cutoff_hz)
-	var stream=refs.Music[0]
-	music.set_stream(stream)
+	music.stream=refs.Music[0].aStream
+	music.volume_db=refs.Music[0].volume
+	#var stream=refs.Music[0]
+	#music.set_stream(stream)
 	_fadeIn(music, 5.)
 	await get_tree().create_timer(5.).timeout
 	###################################
-
+	#print("test", refs.test[0].volume)
+	#puppets.stream=refs.test[0].aStream
+	#puppets.volume_db=refs.test[0].volume
+	#puppets.play()
 	#testTween.tween_property(musicEQ,"cutoff_hz",500.,5.) #NOT WORKING
 	#musicEQ.set_cutoff(500.) #ORIGINAL CMD
 	
@@ -32,13 +38,14 @@ func _ready():
 ######################### VOLUME CONTROL ##############################
 
 func _fadeIn(audioPlayer,time):
-
+	var volumeMax=audioPlayer.volume_db
+	print("fading till volume= ", volumeMax)
 	audioPlayer.volume_db=-80.
 	audioPlayer.play()
 	var tween=get_tree().create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.tween_property(audioPlayer,"volume_db",0., time)
+	tween.tween_property(audioPlayer,"volume_db",volumeMax, time)
 	
 func _fadeOut(audioPlayer,time):
 	var tween=get_tree().create_tween()
@@ -76,26 +83,35 @@ func lowerMusic():
 ######################### MENU SFX ##############################
 
 func _on_main_menu_start_game():
-	ui.stream=refs.UI[0]
+	ui.stream=refs.UI[0].aStream
+	ui.volume_db=refs.UI[0].volume
 	ui.play()
+	pass
 
 func _on_play_button_mouse_entered():
-	ui.stream=refs.UI[1]
+	ui.stream=refs.UI[1].aStream
+	ui.volume_db=refs.UI[1].volume
 	ui.pitch_scale=1.0
 	ui.play()
+	pass
 func _on_quit_button_mouse_entered():
-	ui.stream=refs.UI[1]
+	ui.stream=refs.UI[1].aStream
+	ui.volume_db=refs.UI[1].volume
 	ui.pitch_scale=0.6
 	ui.play()
+	pass
 
 ######################### PLAYER SFX ##############################
 	
 func _dragPlayerSFX():
-	player.stream=refs.Player[0]
+	player.stream=refs.Player[0].aStream
+	player.volume_db=refs.Player[0].volume
 	_fadeIn(player,0.5)
+	pass
 	
 func _stopDragPlayerSFX():
 	_fadeOut(player,1.0)
+	pass
 	
 ######################### update ##############################
 

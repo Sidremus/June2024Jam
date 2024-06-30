@@ -2,12 +2,15 @@ extends Resource
 
 class_name AudioData
 
-@export var Music : Array [AudioStream]
+@export var Music : Array [Asp]
 
-@export var UI : Array [AudioStream]
+@export var UI : Array [Asp]
 
-@export var Player : Array [AudioStream]
+@export var Player : Array [Asp]
 
-@export var Puppets : Array [AudioStream]
+@export var Puppets : Array [Asp]
 
-@export var Interactables : Array [AudioStream]
+@export var Interactables : Array [Asp]
+
+#@export var test : Array [Asp]
+

@@ -23,4 +23,8 @@ max_polyphony = 3
 bus = &"SFX"
 
 [node name="Player" type="AudioStreamPlayer" parent="AudioManager"]
-bus = &"SFX"
+bus = &"Player"
+
+[node name="Puppets" type="AudioStreamPlayer" parent="AudioManager"]
+volume_db = 24.0
+bus = &"Puppets"

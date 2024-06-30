@@ -11,6 +11,9 @@ script = ExtResource("1_y0kpd")
 
 [node name="Audio" parent="." instance=ExtResource("3_14x1i")]
 
+[node name="Music" parent="Audio/AudioManager" index="0"]
+volume_db = 0.0
+
 [node name="Main menu" parent="." instance=ExtResource("1_wkuu7")]
 top_level = true
 
@@ -51,12 +54,12 @@ offset_bottom = 1074.0
 
 [node name="Blockout" parent="." instance=ExtResource("4_f64l2")]
 
+[node name="Ground" parent="Blockout/World" index="0" groups=["Walls"]]
+visible = false
+
 [node name="Maze walls" parent="Blockout/World/WALLS" index="0" groups=["Walls"]]
 
 [node name="Main walls" parent="Blockout/World/WALLS" index="1" groups=["Walls"]]
-
-[node name="Ground" parent="Blockout/World" index="1" groups=["Walls"]]
-visible = false
 
 [connection signal="startGame" from="Main menu" to="Audio" method="_on_main_menu_start_game"]
 [connection signal="mouse_entered" from="Main menu/VBoxContainer/Play Button" to="Audio" method="_on_play_button_mouse_entered"]
